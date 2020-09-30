@@ -31,6 +31,7 @@ export class PbClipboard extends pbMixin(LitElement) {
     render() {
         return html`
             <h3>${translate(this.label)}</h3>
+            abc
             <div>
                 <slot></slot>
                 <paper-icon-button icon="icons:content-copy" @click="${this._copy}"
