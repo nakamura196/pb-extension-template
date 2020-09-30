@@ -31,9 +31,10 @@ export class PbIframe extends pbMixin(LitElement) {
     connectedCallback() {
         super.connectedCallback();
 
-        this.subscribeTo('pb-geolocation', (ev) => {
+        this.subscribeTo('pb-keyword', (ev) => {
             if (ev.detail.label) {
                 this.label = ev.detail.label;
+                this.url = ev.detail.url;
             }
         });
     }

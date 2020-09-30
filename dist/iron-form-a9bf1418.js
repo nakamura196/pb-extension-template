@@ -1,4 +1,4 @@
-import{P as e,h as t,d as i}from"./paper-checkbox-ab1760d5.js";
+import{P as e,h as t,d as i}from"./paper-inky-focus-behavior-b4765f0e.js";import"./paper-checkbox-a097ce7e.js";
 /**
 @license
 Copyright (c) 2015 The Polymer Project Authors. All rights reserved.

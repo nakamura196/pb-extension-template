@@ -3,3 +3,4 @@
  */
 import './src/pb-clipboard.js';
 import './src/pb-iframe.js';
+import './src/pb-keyword.js';
