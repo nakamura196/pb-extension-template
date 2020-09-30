@@ -1,5 +1,5 @@
 node_modules
-dist
+# dist
 custom-elements.json
 i18n/common
 images
