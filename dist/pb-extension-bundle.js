@@ -20,8 +20,7 @@ import{t as e}from"./paper-inky-focus-behavior-b4765f0e.js";import{p as t,L as i
                 align-items: center;
                 padding: 0 16px;
             }
-        `}}customElements.define("pb-clipboard",s);class a extends(t(i)){static get properties(){return r({url:{type:String},width:{type:String},height:{type:String},label:{type:String}},super.properties)}constructor(){super(),this.label="はじめてのラベル",this.url="https://teipublisher.com/index.html",this.width="100%",this.height="600"}connectedCallback(){super.connectedCallback(),this.subscribeTo("pb-keyword",e=>{e.detail.label&&(this.label=e.detail.label,this.url=e.detail.url)})}render(){return o`
-            ${this.label}
+        `}}customElements.define("pb-clipboard",s);class a extends(t(i)){static get properties(){return r({url:{type:String},width:{type:String},height:{type:String}},super.properties)}constructor(){super(),this.url="https://www.google.com/",this.width="100%",this.height="600"}connectedCallback(){super.connectedCallback(),this.subscribeTo("pb-keyword",e=>{e.detail.url&&(this.url=e.detail.url)})}render(){return o`
             <iframe width="${this.width}" height="${this.height}" allowfullscreen="true" frameborder="0" src="${this.url}"/>
         `}}customElements.define("pb-iframe",a);class l extends(t(i)){static get properties(){return r(r({},super.properties),{},{url:{type:String},label:{type:String}})}connectedCallback(){super.connectedCallback(),this.addEventListener("click",()=>this.emitTo("pb-keyword",{url:this.url,label:this.label}))}render(){return o`<span id="content"><slot></slot></span>`}static get styles(){return n`
             :host {
