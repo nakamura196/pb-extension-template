@@ -1,7 +1,4 @@
 {
-    "pb-clipboard": {
-        "demo/pb-clipboard.html": "Clipboard Demo"
-    },
     "pb-iframe": {
         "demo/pb-iframe.html": "Iframe Demo"
     }
