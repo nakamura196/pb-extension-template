@@ -1,15 +1,29 @@
 import { LitElement, html} from 'lit-element';
 import { pbMixin } from '@teipublisher/pb-components/src/pb-mixin';
 
+/**
+ * A component to show iframe.
+ * 
+ * @fires pb-keyword - When received, focuses the url of the keyword passed in with the event
+ */
 export class PbIframe extends pbMixin(LitElement) {
     static get properties() {
         return {
+            /**
+             * Url to load on iframe
+             */
             url: {
                 type: String
             },
+            /**
+             * Width of iframe
+             */
             width : {
                 type: String
             },
+            /**
+             * Height of iframe
+             */
             height : {
                 type: String
             },
@@ -19,7 +33,7 @@ export class PbIframe extends pbMixin(LitElement) {
 
     constructor() {
         super();
-        this.url = 'https://www.google.com/';
+        this.url = '';
         this.width = '100%';
         this.height = '600';
     }

@@ -1,16 +1,13 @@
 import { LitElement, html, css } from 'lit-element';
 import { pbMixin } from '@teipublisher/pb-components/src/pb-mixin';
-import { translate } from "@teipublisher/pb-components/src/pb-i18n";
-import '@polymer/paper-icon-button';
-import '@polymer/iron-icons';
 
 
 /**
- * Represents a geo location. Extends `pb-highlight`, but sends an additional `pb-keyword` event
- * on mouseover.
+ * Represents a keyword. Sends an additional `pb-keyword` event
+ * on click.
  *
  * @slot - default unnamed slot for content
- * @fires pb-keyword - Sends geocoordinates
+ * @fires pb-keyword - Sends keywords
  * @cssprop --pb-highlight-color - Background color to highlight an element
  */
 export class PbKeyword extends pbMixin(LitElement) {
@@ -21,7 +18,7 @@ export class PbKeyword extends pbMixin(LitElement) {
                 type: String
             },
             /**
-             * Optional label for the place, e.g. to display a marker
+             * Optional label for the keyword
              */
             label: {
                 type: String
@@ -79,11 +76,11 @@ export class PbKeyword extends pbMixin(LitElement) {
     }
 
     /**
-     * Fired on mouseover
+     * Fired on click
      *
      * @event pb-keyword
-     * @param {String} label an optional label for the place
-     * @param {String} url an optional label for the place
+     * @param {String} label an optional label for the keyword
+     * @param {String} url an optional url for the keyword
      */
 }
 customElements.define('pb-keyword', PbKeyword);
